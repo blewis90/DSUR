@@ -115,3 +115,5 @@ Error in +labs(x = "Exam Anxiety", y = "Exam Performance %", colour = "Gender") 
 festivalHistogram + geom_histogram(binwidth = 0.4) + labs(x = "Hygiene (Day 1 of Festival)", y = "Frequency")
 density + geom_density() + labs(x = "Hygiene (Day 1 of Festival)", y = "Density Estimate")
 festivalBoxplot + geom_boxplot() + labs(x= "Gender", y = "Hygiene(Day 1 of Festival)")
+bar + stat_summary(fun.y = mean, geom = "bar", fill = "White", colour = "Black") + stat_summary(fun.data = mean_cl_normal, geom = "pointrange") + labs(x = "Film", y = "Mean Arousal")
+
