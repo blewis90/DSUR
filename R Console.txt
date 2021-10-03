@@ -1,0 +1,514 @@
+
+R version 4.1.0 (2021-05-18) -- "Camp Pontanezen"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin17.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.76 (7976) x86_64-apple-darwin17.0]
+
+[History restored from /Users/benlewis/.Rapp.history]
+
+> metallica <- metallica[metallica != "Jason"]
+Error: object 'metallica' not found
+> metallica<-metallica[metallica != "Jason"]
+Error: object 'metallica' not found
+> metallica<-c(metallica, "Rob")
+Error: object 'metallica' not found
+> metallica <-("Lars","James","Jason","Kirk")
+Error: unexpected ',' in "metallica <-("Lars","
+> metallica <-c("Lars","James","Jason","Kirk")
+> metallica
+[1] "Lars"  "James" "Jason" "Kirk" 
+> metallica <- metallica[metallica != "Jason"]
+> metallica
+[1] "Lars"  "James" "Kirk" 
+> 
+> metallica <- c(metallica,"Rob")
+> metallica
+[1] "Lars"  "James" "Kirk"  "Rob"  
+Received memory pressure event 4 vm pressure 0
+> 
+> install.packages("DSUR")
+--- Please select a CRAN mirror for use in this session ---
+Warning message:
+package ‘DSUR’ is not available for this version of R
+
+A version of this package for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages 
+> METALLICAnAMES<- C("lars","James","Kirk,"Rob"")
+Error: unexpected symbol in "METALLICAnAMES<- C("lars","James","Kirk,"Rob"
+> metallicanNames <- c("lars","james","Kirk","Rob")
+> metallicaAges <- c(47, 47, 48, 46)
+> metallica <- data.frame(Name = metallicaNames, Age = metallicaAges)
+Error in data.frame(Name = metallicaNames, Age = metallicaAges) : 
+  object 'metallicaNames' not found
+> metallica <- data.frame(Name = metallicanNames, Age = metallicaAges)
+> metallica
+   Name Age
+1  lars  47
+2 james  47
+3  Kirk  48
+4   Rob  46
+> metallica$Aage
+NULL
+> metallica$Age
+[1] 47 47 48 46
+> metallica$childAge<- c(12,12,4,6)
+> metallica
+   Name Age childAge
+1  lars  47       12
+2 james  47       12
+3  Kirk  48        4
+4   Rob  46        6
+> name(metallica)
+Error in name(metallica) : could not find function "name"
+> names(metallica)
+[1] "Name"     "Age"      "childAge"
+> metallica <- list(metallicaNames, metallicaAges)
+Error: object 'metallicaNames' not found
+> metallica <- list(metallicanNames, metallicaAges)
+> metallica
+[[1]]
+[1] "lars"  "james" "Kirk"  "Rob"  
+
+[[2]]
+[1] 47 47 48 46
+
+> metallica <- cbind(metallicanNames, metallicaAges)
+> metallica
+     metallicanNames metallicaAges
+[1,] "lars"          "47"         
+[2,] "james"         "47"         
+[3,] "Kirk"          "48"         
+[4,] "Rob"           "46"         
+> metallica$fatherhoodAge <-metallicaAge - metallica$childAge
+Error: object 'metallicaAge' not found
+> metallica$fatherhoodAge <-metallicaAge - metallica$childAges
+Error: object 'metallicaAge' not found
+> metallica$fatherhoodAge <-metallicaAges - metallica$childAge
+Error in metallica$childAge : $ operator is invalid for atomic vectors
+> 
+> metallica$fatherhoodAge <-metallica$Age - metallica$childAge
+Error in metallica$Age : $ operator is invalid for atomic vectors
+> name<-c("Ben", "Martin", "Andy", "Paul", "Graham", "Carina", "Karina", "Doug", "Mark", "Zoe")
+> jobs <-c(1,1,1,1,1,2,2,2,2,2)
+> jobs <- factor(jobs, levels - c(1:2), labels = c("lecturer", "student"))
+Error in levels - c(1:2) : non-numeric argument to binary operator
+> jobs <- factor(jobs, levels = c(1:2), labels = c("lecturer", "student"))
+> job<-gl(2, 5, labels = c("Lecturer", "Student"))
+> levels(job)
+[1] "Lecturer" "Student" 
+> levels(job) <-("Medical Lecturer", "medical student")
+Error: unexpected ',' in "levels(job) <-("Medical Lecturer","
+> levels(job) <-c("Medical Lecturer", "medical student")
+> levels(job)
+[1] "Medical Lecturer" "medical student" 
+> friends<-c(5,2,0,4,1,10,12,15,12,17)
+> alcohol<-c(10,15,20,5,30,25,20,16,17,18)
+> income<-c(20000,40000,35000,22000,50000,5000,100,3000,10000,10)
+> neurotic<-c(10,17,14,13,21,7,13,9,14,13)
+> 
+> name<-c("Ben", "Martin", "Andy", "Paul", "Graham", "Carina", "Karina", "Doug", "Mark", "Zoe")
+> lecturerData<-data.frame(name,birth_date,job,friends,alcohol,income, neurotic)
+Error in data.frame(name, birth_date, job, friends, alcohol, income, neurotic) : 
+  object 'birth_date' not found
+> birth_date<-as.Date(c("1977-07-03", "1969-05-24", "1973-06-21", "1970-07-16", "1949-10-10", "1983-11-05", "1987-10-08", "1989-09-16", "1973-05-20", "1984-11-12"))
+> lecturerData<-data.frame(name,birth_date,job,friends,alcohol,income, neurotic)
+> lecturerData
+     name birth_date              job friends alcohol income neurotic
+1     Ben 1977-07-03 Medical Lecturer       5      10  20000       10
+2  Martin 1969-05-24 Medical Lecturer       2      15  40000       17
+3    Andy 1973-06-21 Medical Lecturer       0      20  35000       14
+4    Paul 1970-07-16 Medical Lecturer       4       5  22000       13
+5  Graham 1949-10-10 Medical Lecturer       1      30  50000       21
+6  Carina 1983-11-05  medical student      10      25   5000        7
+7  Karina 1987-10-08  medical student      12      20    100       13
+8    Doug 1989-09-16  medical student      15      16   3000        9
+9    Mark 1973-05-20  medical student      12      17  10000       14
+10    Zoe 1984-11-12  medical student      17      18     10       13
+> neurotic<-c(10,17,NA,13,21,7,13,9,14,NA)
+> lecturerData
+     name birth_date              job friends alcohol income neurotic
+1     Ben 1977-07-03 Medical Lecturer       5      10  20000       10
+2  Martin 1969-05-24 Medical Lecturer       2      15  40000       17
+3    Andy 1973-06-21 Medical Lecturer       0      20  35000       14
+4    Paul 1970-07-16 Medical Lecturer       4       5  22000       13
+5  Graham 1949-10-10 Medical Lecturer       1      30  50000       21
+6  Carina 1983-11-05  medical student      10      25   5000        7
+7  Karina 1987-10-08  medical student      12      20    100       13
+8    Doug 1989-09-16  medical student      15      16   3000        9
+9    Mark 1973-05-20  medical student      12      17  10000       14
+10    Zoe 1984-11-12  medical student      17      18     10       13
+> install.packages("Rcmdr", dependencies = TRUE)
+also installing the dependencies ‘bit’, ‘bit64’, ‘vroom’, ‘tzdb’, ‘matrixStats’, ‘RcppArmadillo’, ‘DBI’, ‘forcats’, ‘hms’, ‘readr’, ‘numDeriv’, ‘SparseM’, ‘conquer’, ‘sp’, ‘openxlsx’, ‘mitools’, ‘rematch’, ‘lazyeval’, ‘arm’, ‘sandwich’, ‘haven’, ‘readstata13’, ‘carData’, ‘pbkrtest’, ‘quantreg’, ‘maptools’, ‘rio’, ‘survey’, ‘estimability’, ‘insight’, ‘minqa’, ‘nloptr’, ‘proxy’, ‘zoo’, ‘TH.data’, ‘cellranger’, ‘progress’, ‘crosstalk’, ‘matrixcalc’, ‘mi’, ‘RcmdrMisc’, ‘car’, ‘effects’, ‘tcltk2’, ‘abind’, ‘relimp’, ‘lme4’, ‘aplpack’, ‘e1071’, ‘leaps’, ‘lmtest’, ‘multcomp’, ‘nortest’, ‘readxl’, ‘rgl’, ‘sem’
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/bit_4.0.4.tgz'
+Content type 'application/octet-stream' length 688274 bytes (672 KB)
+==================================================
+downloaded 672 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/bit64_4.0.5.tgz'
+Content type 'application/octet-stream' length 576409 bytes (562 KB)
+==================================================
+downloaded 562 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/vroom_1.5.5.tgz'
+Content type 'application/octet-stream' length 2675642 bytes (2.6 MB)
+==================================================
+downloaded 2.6 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/tzdb_0.1.2.tgz'
+Content type 'application/octet-stream' length 1206993 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/matrixStats_0.61.0.tgz'
+Content type 'application/octet-stream' length 591141 bytes (577 KB)
+==================================================
+downloaded 577 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/RcppArmadillo_0.10.6.0.0.tgz'
+Content type 'application/octet-stream' length 1893567 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/DBI_1.1.1.tgz'
+Content type 'application/octet-stream' length 671116 bytes (655 KB)
+==================================================
+downloaded 655 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/forcats_0.5.1.tgz'
+Content type 'application/octet-stream' length 354324 bytes (346 KB)
+==================================================
+downloaded 346 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/hms_1.1.0.tgz'
+Content type 'application/octet-stream' length 98652 bytes (96 KB)
+==================================================
+downloaded 96 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/readr_2.0.1.tgz'
+Content type 'application/octet-stream' length 1824792 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/numDeriv_2016.8-1.1.tgz'
+Content type 'application/octet-stream' length 113185 bytes (110 KB)
+==================================================
+downloaded 110 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/SparseM_1.81.tgz'
+Content type 'application/octet-stream' length 1095487 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/conquer_1.0.2.tgz'
+Content type 'application/octet-stream' length 871847 bytes (851 KB)
+==================================================
+downloaded 851 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/sp_1.4-5.tgz'
+Content type 'application/octet-stream' length 1846858 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/openxlsx_4.2.4.tgz'
+Content type 'application/octet-stream' length 3103370 bytes (3.0 MB)
+==================================================
+downloaded 3.0 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/mitools_2.4.tgz'
+Content type 'application/octet-stream' length 270113 bytes (263 KB)
+==================================================
+downloaded 263 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/rematch_1.0.1.tgz'
+Content type 'application/octet-stream' length 12231 bytes (11 KB)
+==================================================
+downloaded 11 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/lazyeval_0.2.2.tgz'
+Content type 'application/octet-stream' length 156515 bytes (152 KB)
+==================================================
+downloaded 152 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/arm_1.11-2.tgz'
+Content type 'application/octet-stream' length 414723 bytes (405 KB)
+==================================================
+downloaded 405 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/sandwich_3.0-1.tgz'
+Content type 'application/octet-stream' length 1489700 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/haven_2.4.3.tgz'
+Content type 'application/octet-stream' length 970339 bytes (947 KB)
+==================================================
+downloaded 947 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/readstata13_0.10.0.tgz'
+Content type 'application/octet-stream' length 935419 bytes (913 KB)
+==================================================
+downloaded 913 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/carData_3.0-4.tgz'
+Content type 'application/octet-stream' length 1819849 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/pbkrtest_0.5.1.tgz'
+Content type 'application/octet-stream' length 352626 bytes (344 KB)
+==================================================
+downloaded 344 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/quantreg_5.86.tgz'
+Content type 'application/octet-stream' length 1637557 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/maptools_1.1-2.tgz'
+Content type 'application/octet-stream' length 2175333 bytes (2.1 MB)
+==================================================
+downloaded 2.1 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/rio_0.5.27.tgz'
+Content type 'application/octet-stream' length 533163 bytes (520 KB)
+==================================================
+downloaded 520 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/survey_4.1-1.tgz'
+Content type 'application/octet-stream' length 2724385 bytes (2.6 MB)
+==================================================
+downloaded 2.6 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/estimability_1.3.tgz'
+Content type 'application/octet-stream' length 36064 bytes (35 KB)
+==================================================
+downloaded 35 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/insight_0.14.4.tgz'
+Content type 'application/octet-stream' length 1763144 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/minqa_1.2.4.tgz'
+Content type 'application/octet-stream' length 341842 bytes (333 KB)
+==================================================
+downloaded 333 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/nloptr_1.2.2.2.tgz'
+Content type 'application/octet-stream' length 945288 bytes (923 KB)
+==================================================
+downloaded 923 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/proxy_0.4-26.tgz'
+Content type 'application/octet-stream' length 232168 bytes (226 KB)
+==================================================
+downloaded 226 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/zoo_1.8-9.tgz'
+Content type 'application/octet-stream' length 1025648 bytes (1001 KB)
+==================================================
+downloaded 1001 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/TH.data_1.0-10.tgz'
+Content type 'application/octet-stream' length 8477657 bytes (8.1 MB)
+==================================================
+downloaded 8.1 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/cellranger_1.1.0.tgz'
+Content type 'application/octet-stream' length 101458 bytes (99 KB)
+==================================================
+downloaded 99 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/progress_1.2.2.tgz'
+Content type 'application/octet-stream' length 83429 bytes (81 KB)
+==================================================
+downloaded 81 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/crosstalk_1.1.1.tgz'
+Content type 'application/octet-stream' length 782702 bytes (764 KB)
+==================================================
+downloaded 764 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/matrixcalc_1.0-5.tgz'
+Content type 'application/octet-stream' length 202437 bytes (197 KB)
+==================================================
+downloaded 197 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/mi_1.0.tgz'
+Content type 'application/octet-stream' length 1976308 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/RcmdrMisc_2.7-1.tgz'
+Content type 'application/octet-stream' length 212125 bytes (207 KB)
+==================================================
+downloaded 207 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/car_3.0-11.tgz'
+Content type 'application/octet-stream' length 1567344 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/effects_4.2-0.tgz'
+Content type 'application/octet-stream' length 2452986 bytes (2.3 MB)
+==================================================
+downloaded 2.3 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/tcltk2_1.2-11.tgz'
+Content type 'application/octet-stream' length 970202 bytes (947 KB)
+==================================================
+downloaded 947 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/abind_1.4-5.tgz'
+Content type 'application/octet-stream' length 61526 bytes (60 KB)
+==================================================
+downloaded 60 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/relimp_1.0-5.tgz'
+Content type 'application/octet-stream' length 75915 bytes (74 KB)
+==================================================
+downloaded 74 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/lme4_1.1-27.1.tgz'
+Content type 'application/octet-stream' length 7335471 bytes (7.0 MB)
+==================================================
+downloaded 7.0 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/aplpack_1.3.3.tgz'
+Content type 'application/octet-stream' length 3614454 bytes (3.4 MB)
+==================================================
+downloaded 3.4 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/e1071_1.7-9.tgz'
+Content type 'application/octet-stream' length 909113 bytes (887 KB)
+==================================================
+downloaded 887 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/leaps_3.1.tgz'
+Content type 'application/octet-stream' length 99587 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/lmtest_0.9-38.tgz'
+Content type 'application/octet-stream' length 398912 bytes (389 KB)
+==================================================
+downloaded 389 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/multcomp_1.4-17.tgz'
+Content type 'application/octet-stream' length 726862 bytes (709 KB)
+==================================================
+downloaded 709 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/nortest_1.0-4.tgz'
+Content type 'application/octet-stream' length 36075 bytes (35 KB)
+==================================================
+downloaded 35 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/readxl_1.3.1.tgz'
+Content type 'application/octet-stream' length 1678740 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/rgl_0.107.14.tgz'
+Content type 'application/octet-stream' length 6119901 bytes (5.8 MB)
+==================================================
+downloaded 5.8 MB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/sem_3.1-11.tgz'
+Content type 'application/octet-stream' length 770960 bytes (752 KB)
+==================================================
+downloaded 752 KB
+
+trying URL 'https://cran.microsoft.com/bin/macosx/contrib/4.1/Rcmdr_2.7-1.tgz'
+Content type 'application/octet-stream' length 4451696 bytes (4.2 MB)
+==================================================
+downloaded 4.2 MB
+
+
+The downloaded binary packages are in
+	/var/folders/33/tkk3956j0kbcj9f4dypw3rrm0000gn/T//Rtmpsd5ON5/downloaded_packages
+install.packages("Rcmdr", dependencies = TRUE)
+>             library(Rcmdr)
+Loading required package: splines
+Loading required package: RcmdrMisc
+Loading required package: car
+Loading required package: carData
+Loading required package: sandwich
+Loading required package: effects
+lattice theme set by effectsTheme()
+See ?effectsTheme for details.
+Error: package or namespace load failed for ‘Rcmdr’:
+ .onLoad failed in loadNamespace() for 'tcltk', details:
+  call: fun(libname, pkgname)
+  error: X11 library is missing: install XQuartz from www.xquartz.org
+> 
+> LIBRARY(Rcmdr)
+Error in LIBRARY(Rcmdr) : could not find function "LIBRARY"
+> library(Rcmdr)
+Error: package or namespace load failed for ‘Rcmdr’:
+ .onLoad failed in loadNamespace() for 'tcltk', details:
+  call: fun(libname, pkgname)
+  error: X11 library is missing: install XQuartz from www.xquartz.org
+Received memory pressure event 4 vm pressure 0
+Received memory pressure event 4 vm pressure 0
+Received memory pressure event 4 vm pressure 0
+> newDataframe <- oldDataframe[rows, columns]
+Error: object 'oldDataframe' not found
+> lecturerPersonality <- lecturerData[, c("friends", "alcohol", "neurotic")]
+> lecturerPersonality
+   friends alcohol neurotic
+1        5      10       10
+2        2      15       17
+3        0      20       14
+4        4       5       13
+5        1      30       21
+6       10      25        7
+7       12      20       13
+8       15      16        9
+9       12      17       14
+10      17      18       13
+> lecturerOnly <- lecturerData[job=="Lecturer",]
+> lecturerOnly
+[1] name       birth_date job        friends    alcohol    income    
+[7] neurotic  
+<0 rows> (or 0-length row.names)
+> alcoholPersonality <- lecturerData[alcohol > 10, c("friends", "alcohol", "neurotic")]
+> alcoholPersnality
+Error: object 'alcoholPersnality' not found
+> alcoholPersonality
+   friends alcohol neurotic
+2        2      15       17
+3        0      20       14
+5        1      30       21
+6       10      25        7
+7       12      20       13
+8       15      16        9
+9       12      17       14
+10      17      18       13
+> lecturerOnly <- subset(lecturerData, job=="Lecturer")
+> alcoholPersonality <- subset(lecturerData, alcohol > 10, select = c("friends", "alcohol", "neurotic"))
+> 
+> newMatrix <- as.matrix(dataframe)
+Error in as.matrix(dataframe) : object 'dataframe' not found
+> 
+> alcoholPersonalityMatrix <- as.matrix(alcoholPersonality)
+> alcoholPersonalityMatrix <- as.matrix(lecturerData[alcohol > 10,
++ c("friends", "alcohol", "neurotic")])
+> 
