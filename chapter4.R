@@ -112,3 +112,6 @@ Error in +labs(x = "Exam Anxiety", y = "Exam Performance %", colour = "Gender") 
   invalid argument to unary operator
 > scatter + geom_point() + geom_smooth(method = "lm", aes(fill = Gender), alpha = 0.1) + labs(x = "Exam Anxiety", y = "Exam Performance %", colour = "Gender")
 `geom_smooth()` using formula 'y ~ x'
+festivalHistogram + geom_histogram(binwidth = 0.4) + labs(x = "Hygiene (Day 1 of Festival)", y = "Frequency")
+density + geom_density() + labs(x = "Hygiene (Day 1 of Festival)", y = "Density Estimate")
+festivalBoxplot + geom_boxplot() + labs(x= "Gender", y = "Hygiene(Day 1 of Festival)")
